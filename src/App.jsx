@@ -21,13 +21,12 @@ const pokemonList = [
       imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
   },
   {
-      name: "mew",
-  },
+    name: "mew",
+  }
 ];
 
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
-
   const handleNextClick = () => {
     if (pokemonIndex < pokemonList.length - 1) {
       setPokemonIndex(pokemonIndex + 1);
@@ -45,6 +44,9 @@ function App() {
      <NavBar
         onPrevClick={handlePrevClick}
         onNextClick={handleNextClick}
+        pokemonList={pokemonList}
+        onPokemonButtonClick={setPokemonIndex}
+        activeIndex={pokemonIndex}
       />
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
     </div>
