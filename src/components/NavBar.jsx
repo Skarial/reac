@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 
 function NavBar({ onPrevClick, onNextClick }) {
   return (
-    <div>
+    <nav>
       <button onClick={onPrevClick}>Précédent</button>
       <button onClick={onNextClick}>Suivant</button>
-    </div>
+    </nav>
   );
 }
 NavBar.propTypes = {
